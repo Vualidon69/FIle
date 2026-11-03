@@ -1,0 +1,1 @@
+Copied from models/DataSoluong/processor. Both fine-tuning runs use Qwen3-VL-2B-Instruct. This is shared processor metadata, not a separately exported DataHanhDong processor. No model training was run.

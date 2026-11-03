@@ -1,0 +1,42 @@
+{
+  "step": 6,
+  "dataset": "DataSoluong",
+  "base_model": "/kaggle/working/models/Qwen3-VL-2B-Instruct",
+  "fusion_checkpoint": "/kaggle/working/TrainTestValidation/CSI_VLFormer_Rebuild/results/vjepa21_runs/run_20261031_212901_890430/fusion/DataSoluong/run_20261101_004409/best_checkpoint.pt",
+  "feature_dir": "/kaggle/input/datasets/mrkhoa69/data111/TrainTestValidation/feature/Fusion_VJEPA21/DataSoluong",
+  "data_root": "/kaggle/working/TrainTestValidation",
+  "rgb_source": "V-JEPA 2.1",
+  "csi_features": 73,
+  "rgb_features": 768,
+  "temporal_steps": 16,
+  "temporal_stride": 16,
+  "qwen_inputs": [
+    "RGB image pixels",
+    "CSI features",
+    "V-JEPA RGB features",
+    "8 learned Perceiver CSI+RGB soft tokens"
+  ],
+  "fusion_and_projector_trained_by_language_loss": true,
+  "qwen_adaptation": "LoRA",
+  "targets": [
+    "state",
+    "attack_type",
+    "people_count"
+  ],
+  "preview_every": 100,
+  "grounded_captions": "pixel measurements only; semantic object/attack-region captions require reviewed annotations",
+  "evidence_mode": "observed single-frame RGB pixels plus normalized CSI temporal features",
+  "answer_only": false,
+  "init_from": null,
+  "gpu_mode": "balanced",
+  "csi_level_cutoffs": [
+    0.40487827857335407,
+    0.5857513944307963
+  ],
+  "test_used_for_selection": false,
+  "device": "cuda",
+  "dtype": "torch.bfloat16",
+  "quantization": "nf4",
+  "image_max_side": 256,
+  "checkpoint_every_steps": 50
+}

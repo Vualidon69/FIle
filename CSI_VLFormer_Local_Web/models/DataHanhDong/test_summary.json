@@ -1,0 +1,78 @@
+{
+  "dataset": "DataHanhDong",
+  "checkpoint": "best_checkpoint.pt",
+  "test_samples": 1049,
+  "test_valid_loss_samples": 1049,
+  "test_inference_errors": 0,
+  "test_loss": 0.001564776588120809,
+  "exact_match_count": 1004,
+  "test_evaluated_predictions": 1049,
+  "exact_match_rate": 0.9571020019065777,
+  "classification": {
+    "accuracy": 1.0,
+    "per_class": {
+      "BinhThuong": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 264
+      },
+      "Replay": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 258
+      },
+      "ChoiLoa": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 264
+      },
+      "CheCam": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 263
+      }
+    },
+    "macro_precision": 1.0,
+    "macro_recall": 1.0,
+    "macro_f1": 1.0,
+    "confusion_matrix": {
+      "BinhThuong": {
+        "BinhThuong": 264,
+        "Replay": 0,
+        "ChoiLoa": 0,
+        "CheCam": 0
+      },
+      "Replay": {
+        "BinhThuong": 0,
+        "Replay": 258,
+        "ChoiLoa": 0,
+        "CheCam": 0
+      },
+      "ChoiLoa": {
+        "BinhThuong": 0,
+        "Replay": 0,
+        "ChoiLoa": 264,
+        "CheCam": 0
+      },
+      "CheCam": {
+        "BinhThuong": 0,
+        "Replay": 0,
+        "ChoiLoa": 0,
+        "CheCam": 263
+      }
+    },
+    "samples": 1049
+  },
+  "binary_detection": {
+    "roc_auc": 1.0,
+    "eer": 0.0,
+    "positive_samples": 785,
+    "negative_samples": 264
+  },
+  "average_inference_seconds": 14.916980313473816,
+  "note": "exact_match_rate=null khi --skip-test-generation. Classification chỉ tính trên mẫu sinh được và parse được nhãn. ROC-AUC/EER dùng xác suất nhánh attack của Fusion."
+}
